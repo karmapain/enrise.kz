@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Karma's Portfolio</title>
+			<!---///////// ICO /////////--->
+<link rel="icon" type="image/x-icon" href="images/ico.png">
+			<!---///////// STYLE /////////--->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/header.css">
+
+</head>
+	<header>
+			<section class="header">
+			  <nav>
+			    <div></div>
+			    <ul>
+			      <a href="#"><li data-xcoord="0px" class="active">Home</li></a>
+			      <a href="about.html"><li data-xcoord="160px">About</li></a>
+			      <a href="oc.html"><li data-xcoord="640px">My OC</li></a>
+			      <a href="project.html"><li data-xcoord="480px">Projects</li></a>
+			      <a href="price.html"><li data-xcoord="320px">Price List</li></a>
+			    </ul>
+			  </nav>
+			</section>
+	</header>
+
+	<script>
+		$("nav ul li").click(function(){
+		  var xcoord = $(this).data("xcoord");
+
+		  $("nav div").stop().animate({marginLeft:xcoord}, 500, "easeInOutExpo");
+		  $(this).addClass("active");
+		  $("nav ul li").not(this).removeClass("active");
+
+		});
+	</script>
+<body>
+
+<div class="container_price">
+	<div class="container" style="max-width: 600px;">
+			<div class="avatar">
+				<a href="https://vk.com/mrkarma">
+					<img src="images/avatar.jpg" alt="Skytsunami" />
+				</a>
+			</div>
+			<div class="content">
+				<h1>Karma</h1>
+					<p>Follow me on:</p>
+						<p>
+					      	<div class="btn">
+					      		<a href="">
+							        Discord
+							    </a>
+						        <a href="https://vk.com/mrkarma">
+							        Vkontakte
+							    </a>
+							    <a href="https://www.instagram.com/krmpain/">
+							        Instagram
+							    </a>
+							    <a href="https://ru.pinterest.com/krmpain/_created/">
+							        Pinterest
+							    </a>
+							    <a href="#">
+							        Pixiv
+							    </a>
+							    <a href="https://twitter.com/Krmpain">
+							        X
+							    </a>
+							    <a href="#">
+							        YouTube
+							    </a>
+							    <a href="#">
+							        Twich
+							    </a>
+			  			    </div>
+		  				</p>
+					<p style="color: #333;">by: Karma</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
