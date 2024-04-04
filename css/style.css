@@ -1,9 +1,10 @@
 
-body {
-	background: #000;
+main {
+	background: transparent;
 	color: #fff;
 	font-family: "Inter", sans-serif;
 	position: relative;
+	margin-top: 100vh;
 }
 h2 {
 	font-size: 1.8rem!important;
