@@ -57,6 +57,7 @@ h2 {
 
 .gradient-border-card {
 	position: relative;
+	margin-top: 1rem;
 	padding: 40px;
 	border-radius: var(--border-radius);
 	flex: 1 1;
