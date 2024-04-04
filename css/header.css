@@ -1,8 +1,8 @@
-.header{
+/*.header{
   position:relative;
   width:800px;
   margin:100px auto;
-}/*
+}
 nav{
   width:100%;
 }
@@ -39,15 +39,15 @@ nav div{
   width:162px;
   height:40px;
   z-index:99;
-}  */
+}  
 .active{
   background: rgba(0,0,0, 0.5);
   color:#fff;
 }
-
-/* Скрыть элемент при просмотре на устройствах с шириной экрана до 768 пикселей (обычно мобильные телефоны) */
+*/
+/* Скрыть элемент при просмотре на устройствах с шириной экрана до 768 пикселей (обычно мобильные телефоны) 
 @media only screen and (max-width: 768px) {
     .header {
         display: none;
     }
-}
+}*/
