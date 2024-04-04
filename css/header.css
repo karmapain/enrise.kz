@@ -27,12 +27,10 @@ body {
   overflow-x: hidden;
 }
 
-.bar {
-  align-items: center;
+nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   color: var(--textDim);
   width: 100%;
   box-sizing: border-box;
@@ -47,10 +45,11 @@ body {
   font-weight: normal;
 }
 .menu:hover {
-  color: var(--text);
+  color: white;
   cursor: pointer;
 }
 .menu_bar{
+  z-index: 9999;
   margin-right: 130px;
   width: 100%;
   display: flex;
