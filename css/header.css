@@ -3,3 +3,50 @@
   width:800px;
   margin:100px auto;
 }
+nav{
+  width:100%;
+}
+nav ul li{
+  display:inline-block;
+  list-style:none;
+  width:160px;
+  text-align:center;
+  font-family:Helvetica, sans-serif;
+  border: 1px dashed rgba(255,255,255, 0);
+  color:rgba(250, 55, 55, 1);
+  padding:10px 0 10px 0;
+  margin:-1px -5px -1px -1px;
+  cursor:pointer;
+  transition:all .2s;
+  -webkit-transition:all .2s;
+}
+nav ul li:hover{
+  /*border:1px dashed #fff;*/
+  background:rgba(255,255,255,.1);
+}
+nav ul{
+  border: 1px solid rgba(250, 55, 55, 1);
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,1);
+  position:absolute;
+  width:100%;
+  padding:0;
+  z-index:100;
+}
+nav div{
+  left:0;
+  top:16px;
+  width:162px;
+  height:40px;
+  z-index:99;
+}
+.active{
+  background: rgba(0,0,0, 0.5);
+  color:#fff;
+}
+
+/* Скрыть элемент при просмотре на устройствах с шириной экрана до 768 пикселей (обычно мобильные телефоны) */
+@media only screen and (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}
