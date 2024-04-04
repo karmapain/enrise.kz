@@ -1,4 +1,4 @@
-// Just a collection of modern UI effects. 
+		// Just a collection of modern UI effects. 
 // I like to keep these kind of things "handy" (in codepen) to show clients/employers what I'm talking about when I say things like "gradient animation"
 
 // If I ever get around to it, I'll clean this all up (lots of extra
