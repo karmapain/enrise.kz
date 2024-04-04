@@ -8,7 +8,6 @@
 <link rel="icon" type="image/x-icon" href="images/ico.png">
 			<!---///////// STYLE /////////--->
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/header.css">
 			<!---///////// SCRIPT /////////--->
 <script src="js/script.js"></script>
 </head>
@@ -26,17 +25,6 @@
 			  </nav>
 			</section>
 	</header>
-
-	<script>
-		$("nav ul li").click(function(){
-		  var xcoord = $(this).data("xcoord");
-
-		  $("nav div").stop().animate({marginLeft:xcoord}, 500, "easeInOutExpo");
-		  $(this).addClass("active");
-		  $("nav ul li").not(this).removeClass("active");
-
-		});
-	</script>
 <body>
 
 <div class="container max-w-7xl pt-5 pb-12 mb-12">
