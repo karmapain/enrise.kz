@@ -1,10 +1,12 @@
 
 main {
-	background: transparent;
 	color: #fff;
 	font-family: "Inter", sans-serif;
 	position: relative;
-	margin-top: 100vh;
+
+}
+.content{
+	margin: 100vh 10% 0 10%;	
 }
 h2 {
 	font-size: 1.8rem!important;
@@ -808,18 +810,6 @@ button {
 
 .sf-ring.--1,.sf-ring.--2 {
 	animation: shape 100s linear infinite
-}
-
-.sf-ring.--2 {
-	animation-direction: reverse
-}
-
-.sf-ring.--3,.sf-ring.--4 {
-	animation: shape 100s linear infinite
-}
-
-.sf-ring.--4 {
-	animation-direction: reverse
 }
 
 @keyframes socialicon {
