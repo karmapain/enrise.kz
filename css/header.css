@@ -17,15 +17,6 @@
   --accentHi: hsla(155, 100%, 100%, 25%);
 }
 
-body {
-  font-family: 'Manrope';
-  font-weight: 400;
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow-x: hidden;
-}
 
 nav {
   display: flex;
