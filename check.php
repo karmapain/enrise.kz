@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
 
     // Email, на который вы хотите отправить данные
-    $to = 'sultanalikhan61@example.com';
+    $to = 'sultanalikhan61@gmail.com';
 
     // Тема письма
     $subject = 'New Contact Form Submission';
@@ -22,7 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Отправка письма
     if (mail($to, $subject, $message, $headers)) {
-        echo 'Your message has been sent successfully!';
+
+
+
+        echo 'Your message has been sent successfully! ';
     } else {
         echo 'Unable to send email. Please try again later.';
     }
