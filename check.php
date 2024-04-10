@@ -1,8 +1,5 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php'; // Путь к файлу autoload.php библиотеки PHPMailer
+require 'phpmailer/PHPMailerAutoload.php'; // Путь к файлу autoload.php библиотеки PHPMailer
 
 // Инициализация PHPMailer
 $mail = new PHPMailer(true);
@@ -20,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPAuth   = true;
         $mail->Username   = 'alimdosmatov@gmail.com'; // Ваш адрес Gmail
         $mail->Password   = 'pro100Alim4ik228'; // Ваш пароль от почты
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port       = 465;
 
         // Настройка отправителя и получателя
         $mail->setFrom('alimdosmatov@gmail.com'); // Ваш адрес Gmail и ваше имя
