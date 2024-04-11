@@ -6,10 +6,10 @@ return [
         'auth' => true,
         'port' => 465, // 587
         'secure' => 'ssl', // tls
-        'username' => 'your_mail@gmail.com',
-        'password' => 'your_password',
+        'username' => 'sultanalikhan61@gmail.com',
+        'password' => 'yccp tcbg wvwd lqlx',
         'charset' => 'UTF-8',
-        'from_email' => 'your_mail@gmail.com',
+        'from_email' => 'sultanalikhan61@gmail.com',
         'from_name' => 'Company Name',
         'is_html' => true,
     ],
