@@ -12,4 +12,4 @@ $attachments = [
     __DIR__ . '/img/5.jpg',
 ];
 
-var_dump(send_mail($settings['mail_settings_prod'], ['e.natsu.dragnill@gmail.com'], 'Письмо с сайта', $body, $attachments));
+var_dump(send_mail($settings['mail_settings_prod'], ['sultanalikhan61@gmail.com'], 'Письмо с сайта', $body, $attachments));
