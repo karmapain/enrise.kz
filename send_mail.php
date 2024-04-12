@@ -13,3 +13,5 @@ $attachments = [
 ];
 
 var_dump(send_mail($settings['mail_settings_prod'], ['sultanalikhan61@gmail.com'], 'Письмо с сайта', $body, $attachments));
+
+?>
