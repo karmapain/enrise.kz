@@ -4,8 +4,8 @@ return [
     'mail_settings_prod' => [
         'host' => 'smtp.gmail.com',
         'auth' => true,
-        'port' => 465, // 587
-        'secure' => 'ssl', // tls
+        'port' => 465, // 587 465
+        'secure' => 'ssl', // tls ssl
         'username' => 'alimdosmatov@gmail.com',
         'password' => 'ifce isbi xdrv sxlq',
         'charset' => 'UTF-8',
