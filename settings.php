@@ -10,7 +10,7 @@ return [
         'password' => 'ifce isbi xdrv sxlq',
         'charset' => 'UTF-8',
         'from_email' => 'alimdosmatov@gmail.com',
-        'from_name' => 'Company Name',
+        'from_name' => 'Enrise Ltd',
         'is_html' => true,
     ],
 ];
