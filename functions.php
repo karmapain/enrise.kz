@@ -36,3 +36,5 @@ function send_mail(array $mail_settings, array $to, string $subject, string $bod
         return false;
     }
 }
+
+?>
