@@ -8,8 +8,8 @@ $body = "<h1>Письмо с сайта</h1>\n
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, esse ipsa itaque laudantium necessitatibus reprehenderit soluta? A accusamus alias aliquid, eius enim ipsum maxime mollitia perferendis quae, quod, suscipit unde?";
 
 $attachments = [
-    __DIR__ . '/img/4.jpg',
-    __DIR__ . '/img/5.jpg',
+    __DIR__ . '/images/4.jpg',
+    __DIR__ . '/images/5.jpg',
 ];
 
 var_dump(send_mail($settings['mail_settings_prod'], ['sultanalikhan61@gmail.com'], 'Письмо с сайта', $body, $attachments));
