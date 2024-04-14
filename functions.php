@@ -8,7 +8,7 @@ function send_mail(array $mail_settings, array $to, string $subject, string $bod
 {
     $mail = new PHPMailer(true);
     try {
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
         $mail->isSMTP();
         $mail->Host = $mail_settings['host'];
         $mail->SMTPAuth = $mail_settings['auth'];
