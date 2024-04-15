@@ -41,9 +41,6 @@ h2 {
 	--geist-foreground-rgb: 255, 255, 255;
 	--border-radius: 12px;
 }
-.logo {
-	max-width: 5rem;
-}
 
 /******************************/
 .gradient-text-animation {
