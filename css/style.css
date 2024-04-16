@@ -256,7 +256,7 @@ h2 {
 
 /* Gradient Animation Button
 /******************************/
-.mt-3 {
+button {
 	z-index: 9999;
 	cursor: pointer;
 	border: 0;
@@ -279,7 +279,7 @@ h2 {
 	max-width: 270px;
 	transition: 0.25s;
 }
-.mt-3:hover{
+button:hover{
 	filter: drop-shadow(1px 1px 5px gray);
 }
 .highlight-bg {
