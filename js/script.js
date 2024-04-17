@@ -173,3 +173,15 @@ function moveCards(dur=0){
       opacity:(i)=>(i==currentCard)?1:0,
     }, 0)
 }
+
+
+$(".custom-carousel").owlCarousel({
+  autoWidth: true,
+  loop: true
+});
+$(document).ready(function () {
+  $(".custom-carousel .item").click(function () {
+    $(".custom-carousel .item").not($(this)).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});
