@@ -1,193 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Enrise</title>
-			<!---///////// ICO /////////--->
-<link rel="icon" type="image/x-icon" href="images/ico.png">
-			<!---///////// STYLE /////////--->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/header.css">
-			<!---///////// SCRIPT /////////--->
-<script src="js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrise</title>
+    <!---///////// ICO /////////--->
+    <link rel="icon" type="image/x-icon" href="images/ico.png">
+    <!---///////// STYLE /////////--->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <style>
+        .send_form {
+            display: none;
+        }
+    </style>
 </head>
-	<header>
-		<!--- RGBA ОДСВЕТКА С ВЕРХУ --->
-		  	<div class="gradient-line">
-	</div>
-	<nav>
-			<div class="logo"> 
-			  <p class="sitename">ENRISE</p>
-			</div>
-			<div class="menu_bar">
-			  <p class="menu">Услуги</p>
-			  <p class="menu">Тарифы</p>
-			  <p class="menu">Об услуге</p>
-			  <p class="menu">О Нас</p>
-			</div>
-			<div style="display: flex; padding-right: 20px; white-space: nowrap;"> 
-				<p class="call_header">+7777 777 77 77</p>
-			  <p class="lang_btn">RU</p>
-			  <p class="lang_btn">KZ</p>
-			</div>
-	</nav>
-
-			
-	</header>
-
-	<script>
-		$("nav ul li").click(function(){
-		  var xcoord = $(this).data("xcoord");
-
-		  $("nav div").stop().animate({marginLeft:xcoord}, 500, "easeInOutExpo");
-		  $(this).addClass("active");
-		  $("nav ul li").not(this).removeClass("active");
-
-		});
-	</script>
 <body>
-	  <div class="blur"></div>
+<header>
+    <!--- RGBA ОДСВЕТКА С ВЕРХУ --->
+    <div class="gradient-line"></div>
+    <nav>
+        <div class="logo">
+            <p class="sitename">ENRISE</p>
+        </div>
+        <div class="menu_bar">
+            <p class="menu">Услуги</p>
+            <p class="menu">Тарифы</p>
+            <p class="menu">Об услуге</p>
+            <p class="menu">О Нас</p>
+        </div>
+        <div style="display: flex; padding-right: 20px; white-space: nowrap;">
+            <p class="call_header">+7777 777 77 77</p>
+            <p class="lang_btn">RU</p>
+            <p class="lang_btn">KZ</p>
+        </div>
+    </nav>
+</header>
+
+<div class="blur"></div>
 
 <div class="grid"></div>
-			<div class="title">
-			  <p>Учись</p>
-			  <p>Зарабатывай</p>
-			  <p>Enrise</p>
-			</div>
+<div class="title">
+    <p>Учись</p>
+    <p>Зарабатывай</p>
+    <p>Enrise</p>
+</div>
 <div class="frame">
-	<button type="submit" class="mt-3 btn">
-		<span>
-			<span class="highlight-bg"></span>
-			<span class="button-text">
-				<svg class="me-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-					<path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-					<circle cx="8.5" cy="7" r="4"></circle>
-					<path d="M20 8v6"></path>
-					<path d="M23 11h-6"></path>
-				</svg>
-				<a class="btn_send" href="send_form.html">ОСТАВИТЬ ЗАЯВКУ</a>
-			</span>
-		</span>
-	</button>
-	<p class="addition"> Рассрочка на 12 месяцев без переплаты (Оставьте заявку сейчас и получите скидку 10%)</p>
+    <button type="submit" class="mt-3 btn" id="showForm">
+        <span>
+            <span class="highlight-bg"></span>
+            <span class="button-text">
+                <svg class="me-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                     stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <path d="M20 8v6"></path>
+                    <path d="M23 11h-6"></path>
+                </svg>
+                <a class="btn_send" href="#">ОСТАВИТЬ ЗАЯВКУ</a>
+            </span>
+        </span>
+    </button>
+    <p class="addition"> Рассрочка на 12 месяцев без переплаты (Оставьте заявку сейчас и получите скидку 10%)</p>
 
 </div>
 <main class="content">
-	<h1 class="sub_title">Наши услуги</h1>
+    <h1 class="sub_title">Наши услуги</h1>
 
-<div class="card_flex">
-															<!----    1 УСЛУГА 		---->
-		<div class="col-lg-4" style="margin-left: 10px;">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-					<h2>Обучение для </h2>
-				</div>
-				<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div class="btn_more">
-					<a class="icon mb-3">Подробнее</a>
-				</div>
-			</div>
-		</div>
+    <div class="card_flex">
+        <!--- 1 УСЛУГА --->
+        <div class="col-lg-4" style="margin-left: 10px;">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2>Обучение для</h2>
+                </div>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+                <div class="btn_more">
+                    <a class="icon mb-3">Подробнее</a>
+                </div>
+            </div>
+        </div>
 
-															<!----    2 УСЛУГА 		---->
-		<div class="col-lg-4" style="margin-left: 10px;">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-					<h2>Обучение для </h2>
-				</div>
-				<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div class="btn_more">
-					<a class="icon mb-3">Подробнее</a>
-				</div>
-			</div>
-		</div>
-															<!----    3 УСЛУГА 		---->
-		<div class="col-lg-4" style="margin-left: 10px;">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-					<h2>Обучение для </h2>
-				</div>
-				<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<div class="btn_more">
-					<a class="icon mb-3">Подробнее</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+        <!--- 2 УСЛУГА --->
+        <div class="col-lg-4" style="margin-left: 10px;">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2>Обучение для</h2>
+                </div>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+                <div class="btn_more">
+                    <a class="icon mb-3">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        <!--- 3 УСЛУГА --->
+        <div class="col-lg-4" style="margin-left: 10px;">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2>Обучение для</h2>
+                </div>
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+                <div class="btn_more">
+                    <a class="icon mb-3">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<h1 class="sub_title">Тарифы</h1>
+    <h1 class="sub_title">Тарифы</h1>
 
-<div class="card_flex">
+    <div class="card_flex">
+        <div class="price">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2>Базовый</h2>
+                </div>
+                <p class="mt-3 price_text">Доступ к базе тендеров <br>
+                    Персональный менеджер <br>
+                    Рассылка тендеров по e-mail <br>
+                    Планы гос. закупок <br>
+                    Регистрация сотрудников <br>
+                    Аналитика <br>
+                    Три конскльтаций в неделю <br>
+                </p>
+            </div>
+        </div>
+        <div class="price">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2>Пермиум</h2>
+                </div>
+                <p class="mt-3 price_text"><span>Включает тариф Базовый </span><br>
+                    <span>Выпуск сертефикатов ЭЦП </span><br>
+                    <span>Открытие ИП </span><br>
+                    <span>Регестрация на ведущих эл. площадках Казахстан </span><br>
+                    <span>Консультаций в сфере закупок </span><br>
+                    <span>10 заявок на обсуждение конкурсной / аукционной документации </span><br>
+                </p>
+            </div>
+        </div>
+        <div class="price ">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2>Пермиум+</h2>
+                </div>
+                <p class="mt-3 price_text">Включает тариф Базовый и Премиюм <br>
+                    Подача заявок на обсуждение конкурсной / аукционной документации <br>
+                </p>
+            </div>
+        </div>
 
-		<div class="price">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-				<h2>Базовый</h2>
-				</div>
-				<p class="mt-3 price_text">Доступ к базе тендеров <br>
-								Персональный менеджер <br>
-								Рассылка тендеров по e-mail <br>
-								Планы гос. закупок <br>
-								Регистрация сотрудников <br>
-								Аналитика <br>
-								Три конскльтаций в неделю <br>
-							</p>
-			</div>
-		</div>
-		<div class="price">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-				<h2>Пермиум</h2>
-				</div>
-				<p class="mt-3 price_text"><span>Включает тариф Базовый </span><br>
-								<span>Выпуск сертефикатов ЭЦП </span><br>
-								<span>Открытие ИП </span><br>
-								<span>Регестрация на ведущих эл. площадках Казахстан </span><br>
-								<span>Консультаций в сфере закупок </span><br>
-								<span>10 заявок на обсуждение конкурсной / аукционной документации </span><br>
-							</p>
-			</div>
-		</div>		
-		<div class="price ">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-				<h2>Пермиум+</h2>
-				</div>
-				<p class="mt-3 price_text">Включает тариф Базовый и Премиюм <br>
-								Подача заявок на обсуждение конкурсной / аукционной документации <br>
-							</p>
-			</div>
-		</div>
-
-	<div class="price">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-				<h2 class="">VIP</h2>
-				</div>
-				<p class="mt-3 price_text"></p>
-			</div>
-		</div>
-	</div>
-</div>
-
-				<!--- ФОН --->
-	<div class="gradient-background__wrapper">
-		<div class="gradient-background">
-			<!--- лавающие шары --->
-			<div class="gradient-background__shape gradient-background__shape--1"></div>
-			<div class="gradient-background__shape gradient-background__shape--2"></div>
-		</div>
-	</div>
-</div>
-
-</div></div>
+        <div class="price">
+            <div class="gradient-border-card">
+                <div class="icon mb-3">
+                    <h2 class="">VIP</h2>
+                </div>
+                <p class="mt-3 price_text"></p>
+            </div>
+        </div>
+    </div>
+    <!--- ФОН --->
+    <div class="gradient-background__wrapper">
+        <div class="gradient-background">
+            <!--- лавающие шары --->
+            <div class="gradient-background__shape gradient-background__shape--1"></div>
+            <div class="gradient-background__shape gradient-background__shape--2"></div>
+        </div>
+    </div>
 </main>
+
+<!-- Form -->
+<div class="send_form">
+    <h2>Заполните данные</h2>
+    <form action="send_mail.php" method="POST">
+        <label for="phone">Номер телефона:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="name">ФИО:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="message">Сопроводительный текст:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+    document.getElementById('showForm').addEventListener('click', function () {
+        document.querySelector('.send_form').style.display = 'block';
+    });
+</script>
+
 </body>
-
 <footer>
-	
-
 </footer>
 </html>
