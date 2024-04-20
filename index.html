@@ -27,11 +27,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: #000000;
             padding: 20px;
             border-radius: 10px;
             z-index: 9999;
-            color: #000;
+            color: #FFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
@@ -49,7 +49,7 @@
         }
 
         .send_form input[type="submit"] {
-            background-color: #4caf50;
+            background-color: #0dbf75;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -63,18 +63,26 @@
         }
 
         .send_form input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #1eAF86;
         }
 
         .send_form textarea {
             height: 100px;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
         }
 
         .send_form .close-btn {
+        	font-size: 50px;
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
+        }
+
+        .send_form .close-btn:hover {
+        	color: #992222;
         }
     </style>
 </head>
@@ -240,7 +248,7 @@
 
 <!-- Form -->
 <div class="send_form">
-    <span class="close-btn" id="closeForm" style="font-size: 24px;">×</span>
+    <span class="close-btn" id="closeForm">×</span>
     <h2>Заполните данные</h2>
     <form action="send_mail.php" method="POST">
         <label for="phone">Номер телефона:</label><br>
