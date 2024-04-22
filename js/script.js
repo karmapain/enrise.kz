@@ -1,14 +1,3 @@
-		// Just a collection of modern UI effects. 
-// I like to keep these kind of things "handy" (in codepen) to show clients/employers what I'm talking about when I say things like "gradient animation"
-
-// If I ever get around to it, I'll clean this all up (lots of extra
-// unecessary markup + CSS). For now,
-// I'm just using Codepen as my personal "effect holder" :)
-
-// Inspiration: https://portal.griflan.com/
-// Inspiration: https://github.com/cruip/cruip-tutorials/tree/main/spotlight-effect
-
-// Cards spotlight
 class Spotlight {
 	constructor(containerElement) {
 		this.container = containerElement;
