@@ -1,7 +1,15 @@
+.fixed_header{
+	position: fixed;
+	top: 10 px;
+	z-index: 9999;
+}
                                  /* всякое */
 a{
 	text-decoration: none;
 
+}
+.modal{
+	color: white;
 }
 button{
 	text-decoration: none;
@@ -78,35 +86,50 @@ main {
 .btn_more{
 	position: absolute;
 	right: 30px;
-	bottom: 20px;
+	bottom: 30px;
 	border-radius: 10px;
 	color: #999;
 }
-.btn_more:hover{
+.btn_more:hover ,.btn_price:hover{
 	color: white;
 	filter: drop-shadow(1px 1px 5px gray);
+}
+.btn_price{
+	margin-top: 30px;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+	color: #999;
+	
 }
 
 									/* TEXT */
 .price_text{
-	text-align: center;
 	padding-top: 20px;
 }
-.price_text span{
-	margin-top: 30px;
-}
+.price_text p{
+	white-space: nowrap;
+	margin-top: 12px;
 
+}
+.price{
+	text-align: center;
+}
 
 						/**************          	КАРТОЧКИ 			****************/
 .price{
 	margin: 0 10px 0 10px;
-	max-width: 350px;
+	max-width: 310px;
 }
 @keyframes nextui-k-dAFEPd {
 	100% {
 		background-position: -200% center
 	}
 }
+
+
+
 
 /*********************/
 @font-face {
@@ -231,7 +254,6 @@ main {
 	}
 	.icon {
 		position: relative;
-		display: inline-flex;
 		padding: 0.75rem;
 		border-radius: inherit;
 	}
@@ -646,90 +668,3 @@ main {
 
 /****************/
 
-.spacer {
-	padding-top: 300px;
-}
-.tds-layout.dx-fixed-background__layout {
-	-webkit-padding-end: 10px;
-	-webkit-padding-start: 10px;
-	grid-template-areas: "main main";
-	grid-template-columns: repeat(2,1fr);
-	padding-inline-end: 10px;
-	padding-inline-start: 10px;
-}
-.dx-fixed-background {
-	--dx-fixed-bg-section-height: 200vh;
-}
-.dx-fixed-background__container {
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	height: var(--dx-fixed-bg-section-height);
-	justify-content: center;
-	overflow: clip;
-	position: relative;
-}
-.dx-fixed-background__media {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	height: 100vh;
-	margin-top: -100vh;
-	overflow: hidden;
-	position: sticky;
-	top: 0;
-}
-.dx-fixed-background__media-asset {
-	height: 100vh;
-	-o-object-fit: cover;
-	object-fit: cover;
-	width: 100%;
-}
-.tds-theme--replicant-v2 [class*=tds-clip-] {
-	--clip-size: 20px;
-	--top-left-normal: 0 0;
-	--top-left-clip: 0 var(--clip-size),var(--clip-size) 0;
-	--top-right-normal: 100% 0;
-	--top-right-clip: calc(100% - var(--clip-size)) 0,100% var(--clip-size);
-	--bottom-right-normal: 100% 100%;
-	--bottom-right-clip: 100% calc(100% - var(--clip-size)),calc(100% - var(--clip-size)) 100%;
-	--bottom-left-normal: 0 100%;
-	--bottom-left-clip: var(--clip-size) 100%,0 calc(100% - var(--clip-size));
-	--clip: polygon(var(--top-left,var(--top-left-normal)),var(--top-right,var(--top-right-normal)),var(--bottom-right,var(--bottom-right-normal)),var(--bottom-left,var(--bottom-left-normal)));
-	-webkit-clip-path: var(--clip);
-	clip-path: var(--clip);
-}
-.tds-theme--replicant-opaque-bg {
-	-webkit-backdrop-filter: blur(var(--tds-blur--small));
-	backdrop-filter: blur(var(--tds-blur--small));
-	background: none;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 1;
-}.dx-fixed-background {
-	--dx-fixed-bg-section-height: 200vh;
-}
-.dx-fixed-background__media-wrapper {
-	height: var(--dx-fixed-bg-section-height);
-	inset-inline-start: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	transform: scale(1);
-	border-radius: 0;
-}
-.dx-fixed-background .dx-fixed-wrapper {
-	padding: 24px;
-	background: #fff;
-	position: relative;
-}
-
-/****************************/
