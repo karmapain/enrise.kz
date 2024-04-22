@@ -14,255 +14,206 @@
 <script src="js/script.js"></script>
 <script src="js/header.js"></script>
 </head>
-	<header>
+
+
+<header>
 	<nav class="fixed_header">
 		<!--- RGBA ОДСВЕТКА С ВЕРХУ --->
-		  	<div class="gradient-line">
-	</div>
-						<!--- 	HEADER    --->
-			<div class="logo">
-			  <p class="sitename">ENRISE</p>
-			</div>
-			<div class="menu_bar">
-			  <p class="one menu" onclick="scrollTo_1()">Услуги</p>
-			  <p class="two menu" onclick="scrollTo_2()">Тарифы</p>
-			  <p class="menu" onclick="scrollTo_3()">Об услуге</p>
-			  <p class="menu" onclick="scrollTo_4()">О Нас</p>
-			</div>
-			<div style="display: flex; padding-right: 20px; white-space: nowrap;">
-				<p class="call_header">+7777 777 77 77</p>
-			  <p class="lang_btn">RU</p>
-			  <p class="lang_btn">KZ</p>
-			</div>
+		<div class="gradient-line">
+		</div>
+
+		<!--- 	HEADER    --->
+		<div class="logo">
+		    <p class="sitename">ENRISE</p>
+		</div>
+
+		<div class="menu_bar">
+		    <p class="one menu" onclick="scrollTo_1()">Услуги</p>
+		    <p class="two menu" onclick="scrollTo_2()">Тарифы</p>
+			<p class="menu" onclick="scrollTo_3()">Об услуге</p>
+			<p class="menu" onclick="scrollTo_4()">О Нас</p>
+		</div>
+
+		<div style="display: flex; padding-right: 20px; white-space: nowrap;">
+			<p class="call_header">+7777 777 77 77</p>
+			<p class="lang_btn">RU</p>
+			<p class="lang_btn">KZ</p>
+		</div>
 	</nav>
-	</header>
-
-	<script>
-		$("nav ul li").click(function(){
-		  var xcoord = $(this).data("xcoord");
-
-		  $("nav div").stop().animate({marginLeft:xcoord}, 500, "easeInOutExpo");
-		  $(this).addClass("active");
-		  $("nav ul li").not(this).removeClass("active");
-
-		});
-
-		function scrollTo_1() {
-            var element_1 = document.getElementById('element_1');
-            if (element_1) {
-                window.scrollTo({
-                    top: element_1.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        }
-
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.body.classList.remove("scrolled-down");
-            } else {
-                document.body.classList.add("scrolled-down");
-            }
-            prevScrollpos = currentScrollPos;
-        }
-
-
-        /*window.onscroll = function() { scrollFunction() };
-
-        function scrollFunction() {
-            var backToTopButton = document.getElementById("back-to-top");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        }
-
-        function scrollToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-        // Auto-hide the button after 3 seconds if no scrolling occurs
-        setTimeout(function() {
-            var backToTopButton = document.getElementById("back-to-top");
-            if (!(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
-                backToTopButton.style.display = "none";
-            }
-        }, 3000);*/
-	</script>
+</header>
 
 <body>
-	  <div class="blur"></div>
+	<div class="blur"></div>
 
-<div class="grid"></div>
-			<div class="title">
-			  <p>Учись</p>
-			  <p>Зарабатывай</p>
-			  <p>Enrise</p>
-			</div>
-<div class="frame">
-	<button type="submit" class="mt-3 btn">
-		<span>
-			<span class="highlight-bg"></span>
-			<span class="button-text">
-				<svg class="me-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
-					<path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-					<circle cx="8.5" cy="7" r="4"></circle>
-					<path d="M20 8v6"></path>
-					<path d="M23 11h-6"></path>
-				</svg>
-				<a href="#" class="modal">ОСТАВИТЬ ЗАЯВКУ</a>
+	<div class="grid"></div>
+				<div class="title">
+				  <p>Учись</p>
+				  <p>Зарабатывай</p>
+				  <p>Enrise</p>
+				</div>
+	<div class="frame">
+		<button type="submit" class="mt-3 btn">
+			<span>
+				<span class="highlight-bg"></span>
+				<span class="button-text">
+					<svg class="me-2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+						<path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+						<circle cx="8.5" cy="7" r="4"></circle>
+						<path d="M20 8v6"></path>
+						<path d="M23 11h-6"></path>
+					</svg>
+					<a href="#" class="modal">ОСТАВИТЬ ЗАЯВКУ</a>
 
+				</span>
 			</span>
-		</span>
-	</button>
+		</button>
 
-	<p class="addition"> Рассрочка на 12 месяцев без переплаты (Оставьте заявку сейчас и получите скидку 10%)</p>
+		<p class="addition"> Рассрочка на 12 месяцев без переплаты (Оставьте заявку сейчас и получите скидку 10%)</p>
 
-</div>
-<main class="content">
-	<h1 class="sub_title" id="element_1">Приглашаем вас пройти обучение:</h1>
-
-    <div class="card_flex">
-        <!--- 1 УСЛУГА --->
-        <div class="col-lg-4" style="margin-left: 10px;">
-            <div class="gradient-border-card">
-                <div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
-                	IMAGES
-                </div>
-                <h2><br>Основы тендерной деятельности:</h2>
-                <p class="mt-3">
-                	<ul>
-					    <li>Введение в систему государственных и коммерческих тендеров</li>
-					    <li>Процедуры подачи заявок и участия в тендерных торгах</li>
-					    <li>Правовые аспекты тендерной деятельности</li>
-					</ul>
-				</p>
-                <div class="btn_more">
-                    <a class="icon mb-3">Подробнее</a>
-                </div>
-            </div>
-        </div>
-
-        <!--- 2 УСЛУГА --->
-        <div class="col-lg-4" style="margin-left: 10px;">
-            <div class="gradient-border-card">
-            	<div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
-                	IMAGES
-                </div>
-                <h2><br>Электронные закупки:</h2>
-                <p class="mt-3">
-                	<ul>
-					    <li>Подготовка и подача заявок в электронной форме</li>
-					    <li>Работа с электронными торговыми площадками</li>
-					    <li>Эффективное использование информационных технологий в тендерной деятельности</li>
-					</ul>
-				</p>
-                <div class="btn_more">
-                    <a class="icon mb-3">Подробнее</a>
-                </div>
-            </div>
-        </div>
-        <!--- 3 УСЛУГА --->
-        <div class="col-lg-4" style="margin-left: 10px;">
-            <div class="gradient-border-card">
-            	<div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
-                	IMAGES
-                </div>
-                <h2><br>Управление тендерными проектами:</h2>
-                <p class="mt-3">
-                	<ul>
-					    <li>Планирование и организация тендерных процессов</li>
-					    <li>Управление рисками в тендерной деятельности</li>
-					    <li>Методы и стратегии выигрыша тендеров</li>
-					</ul>
-				</p>
-                <div class="btn_more">
-                    <a class="icon mb-3">Подробнее</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-	<h1 class="sub_title">Тарифы</h1>
-
-<div class="card_flex">
-
-		<div class="price">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-					<h2>Базовый</h2>
-				</div>
-				<p class="mt-3 price_text">Доступ к базе тендеров <br>
-								Персональный менеджер <br>
-								Рассылка тендеров по e-mail <br>
-								Планы гос. закупок <br>
-								Регистрация сотрудников <br>
-								Аналитика <br>
-								Три конскльтаций в неделю <br>
-							</p>
-				<div class="btn_price">
-					<a class="icon mt-3">Выбрать</a>
-				</div>
-			</div>
-		</div>
-		<div class="price">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-					<h2>Пермиум</h2>
-				</div>
-				<p class="mt-3 price_text"><p>Включает тариф Базовый </p><br>
-								<p>Выпуск сертефикатов ЭЦП </p><br>
-								<p>Открытие ИП </p><br>
-								<p>Регестрация на ведущих эл. площадках Казахстан </p><br>
-								<p>Консультаций в сфере закупок </p><br>
-								<p>10 заявок на обсуждение конкурсной / аукционной документации </p><br>
-							</p>
-			</div>
-				<div class="btn_price">
-					<a class="icon mt-3">Выбрать</a>
-				</div>
-		</div>
-		<div class="price ">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-				<h2>Пермиум+</h2>
-				</div>
-				<p class="mt-3 price_text">Включает тариф Базовый и Премиюм <br>
-								Подача заявок на обсуждение конкурсной / аукционной документации <br>
-							</p>
-				<div class="btn_price">
-					<a class="icon mt-3">Выбрать</a>
-				</div>
-			</div>
-		</div>
-
-	<div class="price">
-			<div class="gradient-border-card">
-				<div class="icon mb-3">
-				<h2 class="">VIP</h2>
-				</div>
-				<p class="mt-3 price_text"></p>
-			</div>
-		</div>
 	</div>
-</div>
+	<main class="content">
+		<h1 class="sub_title">Приглашаем вас пройти обучение:</h1>
 
-				<!--- ФОН --->
-	<div class="gradient-background__wrapper">
-		<div class="gradient-background">
-			<!--- лавающие шары --->
-			<div class="gradient-background__shape gradient-background__shape--1"></div>
-			<div class="gradient-background__shape gradient-background__shape--2"></div>
+	    <div class="card_flex">
+	        <!--- 1 УСЛУГА --->
+	        <div class="col-lg-4" style="margin-left: 10px;">
+	            <div class="gradient-border-card">
+	                <div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
+	                	IMAGES
+	                </div>
+	                <h2><br>Основы тендерной деятельности:</h2>
+	                <p class="mt-3">
+	                	<ul>
+						    <li>Введение в систему государственных и коммерческих тендеров</li>
+						    <li>Процедуры подачи заявок и участия в тендерных торгах</li>
+						    <li>Правовые аспекты тендерной деятельности</li>
+						</ul>
+					</p>
+	                <div class="btn_more">
+	                    <a class="icon mb-3">Подробнее</a>
+	                </div>
+	            </div>
+	        </div>
+
+	        <!--- 2 УСЛУГА --->
+	        <div class="col-lg-4" style="margin-left: 10px;">
+	            <div class="gradient-border-card">
+	            	<div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
+	                	IMAGES
+	                </div>
+	                <h2><br>Электронные закупки:</h2>
+	                <p class="mt-3">
+	                	<ul>
+						    <li>Подготовка и подача заявок в электронной форме</li>
+						    <li>Работа с электронными торговыми площадками</li>
+						    <li>Эффективное использование информационных технологий в тендерной деятельности</li>
+						</ul>
+					</p>
+	                <div class="btn_more">
+	                    <a class="icon mb-3">Подробнее</a>
+	                </div>
+	            </div>
+	        </div>
+	        <!--- 3 УСЛУГА --->
+	        <div class="col-lg-4" style="margin-left: 10px;">
+	            <div class="gradient-border-card">
+	            	<div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
+	                	IMAGES
+	                </div>
+	                <h2><br>Управление тендерными проектами:</h2>
+	                <p class="mt-3">
+	                	<ul>
+						    <li>Планирование и организация тендерных процессов</li>
+						    <li>Управление рисками в тендерной деятельности</li>
+						    <li>Методы и стратегии выигрыша тендеров</li>
+						</ul>
+					</p>
+	                <div class="btn_more">
+	                    <a class="icon mb-3">Подробнее</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+		<h1 class="sub_title" id="element_1">Тарифы</h1>
+
+		<div class="card_flex">
+
+				<div class="price">
+					<div class="gradient-border-card">
+						<div class="icon mb-3">
+							<h2>Базовый</h2>
+						</div>
+						<p class="mt-3 price_text">Доступ к базе тендеров <br>
+										Персональный менеджер <br>
+										Рассылка тендеров по e-mail <br>
+										Планы гос. закупок <br>
+										Регистрация сотрудников <br>
+										Аналитика <br>
+										Три конскльтаций в неделю <br>
+									</p>
+						<div class="btn_price">
+							<a class="icon mt-3">Выбрать</a>
+						</div>
+					</div>
+				</div>
+				<div class="price">
+					<div class="gradient-border-card">
+						<div class="icon mb-3">
+							<h2>Пермиум</h2>
+						</div>
+						<p class="mt-3 price_text"><p>Включает тариф Базовый </p><br>
+										<p>Выпуск сертефикатов ЭЦП </p><br>
+										<p>Открытие ИП </p><br>
+										<p>Регестрация на ведущих эл. площадках Казахстан </p><br>
+										<p>Консультаций в сфере закупок </p><br>
+										<p>10 заявок на обсуждение конкурсной / аукционной документации </p><br>
+									</p>
+					</div>
+						<div class="btn_price">
+							<a class="icon mt-3">Выбрать</a>
+						</div>
+				</div>
+				<div class="price ">
+					<div class="gradient-border-card">
+						<div class="icon mb-3">
+						<h2>Пермиум+</h2>
+						</div>
+						<p class="mt-3 price_text">Включает тариф Базовый и Премиюм <br>
+										Подача заявок на обсуждение конкурсной / аукционной документации <br>
+									</p>
+						<div class="btn_price">
+							<a class="icon mt-3">Выбрать</a>
+						</div>
+					</div>
+				</div>
+
+			<div class="price">
+					<div class="gradient-border-card">
+						<div class="icon mb-3">
+						<h2 class="">VIP</h2>
+						</div>
+						<p class="mt-3 price_text"></p>
+					</div>
+				</div>
+
+			</div>
 		</div>
-	</div>
-</div>
+		<div id="element_2"></div>
+						<!--- ФОН --->
+			<div class="gradient-background__wrapper">
+				<div class="gradient-background">
+					<!--- лавающие шары --->
+					<div class="gradient-background__shape gradient-background__shape--1"></div>
+					<div class="gradient-background__shape gradient-background__shape--2"></div>
+				</div>
+			</div>
+		</div>
 
-</div></div>
-</main>
+		</div></div>
+
+
+	</main>
 </body>
 
 		<link rel="stylesheet" href="css/footer.css">
@@ -273,4 +224,72 @@
 		<div class="social"> Instagram VKontakte YouTube </div>
 	</div>
 </footer>
+
+<script>
+	$("nav ul li").click(function(){
+	  var xcoord = $(this).data("xcoord");
+
+	  $("nav div").stop().animate({marginLeft:xcoord}, 500, "easeInOutExpo");
+	  $(this).addClass("active");
+	  $("nav ul li").not(this).removeClass("active");
+
+	});
+
+	function scrollTo_1() {
+        var element_1 = document.getElementById('element_1');
+        if (element_1) {
+            window.scrollTo({
+                top: element_1.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    function scrollTo_2() {
+        var element_2 = document.getElementById('element_2');
+        if (element_2) {
+            window.scrollTo({
+                top: element_2.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.body.classList.remove("scrolled-down");
+        } else {
+            document.body.classList.add("scrolled-down");
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+
+    /*window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        var backToTopButton = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    // Auto-hide the button after 3 seconds if no scrolling occurs
+    setTimeout(function() {
+        var backToTopButton = document.getElementById("back-to-top");
+        if (!(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
+            backToTopButton.style.display = "none";
+        }
+    }, 3000);*/
+</script>
+
 </html>
