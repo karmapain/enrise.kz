@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <style>
-        .send_form_bg {
+        .send_mail_form_bg {
             display: none;
             position: fixed;
             top: 0;
@@ -21,34 +21,35 @@
             z-index: 9998;
         }
 
-        .send_form {
+        .send_mail_form {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #000000;
+            background-color: #444444;
             padding: 20px;
+            border: 1px solid #2e00ff;
             border-radius: 10px;
             z-index: 9999;
             color: #FFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
-        .send_form form {
+        .send_mail_form form {
             max-width: 400px;
             margin: 0 auto;
         }
 
-        .send_form label,
-        .send_form input,
-        .send_form textarea {
+        .send_mail_form label,
+        .send_mail_form input,
+        .send_mail_form textarea {
             display: block;
             margin-bottom: 10px;
             width: 100%;
         }
 
-        .send_form input[type="submit"] {
+        .send_mail_form input[type="submit"] {
             background-color: #0dbf75;
             color: white;
             border: none;
@@ -62,18 +63,18 @@
             border-radius: 5px;
         }
 
-        .send_form input[type="submit"]:hover {
+        .send_mail_form input[type="submit"]:hover {
             background-color: #1eAF86;
         }
 
-        .send_form textarea {
+        .send_mail_form textarea {
             height: 100px;
             width: 100%;
             max-width: 100%;
             min-width: 100%;
         }
 
-        .send_form .close-btn {
+        .send_mail_form .close-btn {
         	font-size: 50px;
             position: absolute;
             top: 10px;
@@ -81,7 +82,7 @@
             cursor: pointer;
         }
 
-        .send_form .close-btn:hover {
+        .send_mail_form .close-btn:hover {
         	color: #992222;
         }
     </style>
@@ -117,7 +118,7 @@
     <p>Enrise</p>
 </div>
 <div class="frame">
-    <button type="submit" class="mt-3 btn" id="showForm">
+    <button type="submit" class="mt-3 btn" id="showMailForm">
         <span>
             <span class="highlight-bg"></span>
             <span class="button-text">
@@ -136,17 +137,23 @@
 
 </div>
 <main class="content">
-    <h1 class="sub_title">Наши услуги</h1>
+    <h1 class="sub_title">Приглашаем вас пройти обучение:</h1>
 
     <div class="card_flex">
         <!--- 1 УСЛУГА --->
         <div class="col-lg-4" style="margin-left: 10px;">
             <div class="gradient-border-card">
-                <div class="icon mb-3">
-                    <h2>Обучение для</h2>
+                <div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
+                	IMAGES
                 </div>
-                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
+                <h2><br>Основы тендерной деятельности:</h2>
+                <p class="mt-3">
+                	<ul>
+					    <li>Введение в систему государственных и коммерческих тендеров</li>
+					    <li>Процедуры подачи заявок и участия в тендерных торгах</li>
+					    <li>Правовые аспекты тендерной деятельности</li>
+					</ul>
+				</p>
                 <div class="btn_more">
                     <a class="icon mb-3">Подробнее</a>
                 </div>
@@ -156,11 +163,17 @@
         <!--- 2 УСЛУГА --->
         <div class="col-lg-4" style="margin-left: 10px;">
             <div class="gradient-border-card">
-                <div class="icon mb-3">
-                    <h2>Обучение для</h2>
+            	<div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
+                	IMAGES
                 </div>
-                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
+                <h2><br>Электронные закупки:</h2>
+                <p class="mt-3">
+                	<ul>
+					    <li>Подготовка и подача заявок в электронной форме</li>
+					    <li>Работа с электронными торговыми площадками</li>
+					    <li>Эффективное использование информационных технологий в тендерной деятельности</li>
+					</ul>
+				</p>
                 <div class="btn_more">
                     <a class="icon mb-3">Подробнее</a>
                 </div>
@@ -169,11 +182,17 @@
         <!--- 3 УСЛУГА --->
         <div class="col-lg-4" style="margin-left: 10px;">
             <div class="gradient-border-card">
-                <div class="icon mb-3">
-                    <h2>Обучение для</h2>
+            	<div class="icon mb-3" style="background-color: #7776; width: 90%; height: 50px; text-align: center;">
+                	IMAGES
                 </div>
-                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
+                <h2><br>Управление тендерными проектами:</h2>
+                <p class="mt-3">
+                	<ul>
+					    <li>Планирование и организация тендерных процессов</li>
+					    <li>Управление рисками в тендерной деятельности</li>
+					    <li>Методы и стратегии выигрыша тендеров</li>
+					</ul>
+				</p>
                 <div class="btn_more">
                     <a class="icon mb-3">Подробнее</a>
                 </div>
@@ -244,11 +263,11 @@
 </main>
 
 <!-- Form Background -->
-<div class="send_form_bg"></div>
+<div class="send_mail_form_bg"></div>
 
 <!-- Form -->
-<div class="send_form">
-    <span class="close-btn" id="closeForm">×</span>
+<div class="send_mail_form">
+    <span class="close-btn" id="closeMailForm">×</span>
     <h2>Заполните данные</h2>
     <form action="send_mail.php" method="POST">
         <label for="phone">Номер телефона:</label><br>
@@ -269,20 +288,20 @@
 
 <script src="js/script.js"></script>
 <script>
-    document.getElementById('showForm').addEventListener('click', function () {
-        document.querySelector('.send_form_bg').style.display = 'block';
-        document.querySelector('.send_form').style.display = 'block';
+    document.getElementById('showMailForm').addEventListener('click', function () {
+        document.querySelector('.send_mail_form_bg').style.display = 'block';
+        document.querySelector('.send_mail_form').style.display = 'block';
     });
 
-    document.getElementById('closeForm').addEventListener('click', function () {
-        document.querySelector('.send_form_bg').style.display = 'none';
-        document.querySelector('.send_form').style.display = 'none';
+    document.getElementById('closeMailForm').addEventListener('click', function () {
+        document.querySelector('.send_mail_form_bg').style.display = 'none';
+        document.querySelector('.send_mail_form').style.display = 'none';
     });
 
-    document.querySelector('.send_form_bg').addEventListener('click', function (e) {
-        if (e.target.classList.contains('send_form_bg')) {
-            document.querySelector('.send_form_bg').style.display = 'none';
-            document.querySelector('.send_form').style.display = 'none';
+    document.querySelector('.send_mail_form_bg').addEventListener('click', function (e) {
+        if (e.target.classList.contains('send_mail_form_bg')) {
+            document.querySelector('.send_mail_form_bg').style.display = 'none';
+            document.querySelector('.send_mail_form').style.display = 'none';
         }
     });
 </script>
