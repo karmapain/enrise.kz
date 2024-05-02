@@ -173,6 +173,10 @@
         .info_form .close-btn:hover {
         	color: #992222;
         }
+
+        .info_text_1, .info_text_2, .info_text_3 {
+        	display: none;
+        }
     </style>
 </head>
 
@@ -256,7 +260,7 @@
 						    <li>Правовые аспекты тендерной деятельности</li>
 						</ul>
 					</p>
-	                <button type="submit" class="btn_more" id="showInfoForm">
+	                <button type="submit" class="btn_more" id="showInfoForm_1">
 	                    Подробнее
 	                </button>
 	            </div>
@@ -276,9 +280,9 @@
 						    <li>Эффективное использование информационных технологий в тендерной деятельности</li>
 						</ul>
 					</p>
-	                <div class="btn_more">
-	                    <a class="icon mb-3">Подробнее</a>
-	                </div>
+	                <button type="submit" class="btn_more" id="showInfoForm_2">
+	                    Подробнее
+	                </button>
 	            </div>
 	        </div>
 	        <!--- 3 УСЛУГА --->
@@ -295,9 +299,9 @@
 						    <li>Методы и стратегии выигрыша тендеров</li>
 						</ul>
 					</p>
-	                <div class="btn_more">
-	                    <a class="icon mb-3">Подробнее</a>
-	                </div>
+	                <button type="submit" class="btn_more" id="showInfoForm_3">
+	                    Подробнее
+	                </button>
 	            </div>
 	        </div>
 	    </div>
@@ -335,10 +339,11 @@
 									<p>Консультаций в сфере закупок </p><br>
 									<p>10 заявок на обсуждение конкурсной / аукционной документации </p><br>
 								</p>
-				</div>
+
 					<div class="btn_price">
 						<a class="icon mt-3">Выбрать</a>
 					</div>
+				</div>
 			</div>
 			<div class="price ">
 				<div class="gradient-border-card">
@@ -404,8 +409,16 @@
 	<div class="info_form">
 	    <span class="close-btn" id="closeInfoForm">×</span>
 	    <h2>Курсы</h2>
-	    <div>
-	    	lflfllflflfllflfl flfllflflfllf
+	    <div class="info_text_1">
+	    	1 lflfllflflfllflfl flfllflflfllf
+	    </div>
+
+	    <div class="info_text_2">
+	    	2 lflfllflflfllflfl flfllflflfllf
+	    </div>
+
+	    <div class="info_text_3">
+	    	3 lflfllflflfllflfl flfllflflfllf
 	    </div>
 	</div>
 
@@ -431,24 +444,43 @@
 	    });
 
 
-	    document.getElementById('showInfoForm').addEventListener('click', function () {
+
+	    document.getElementById('showInfoForm_1').addEventListener('click', function () {
 	        document.querySelector('.info_form_bg').style.display = 'block';
 	        document.querySelector('.info_form').style.display = 'block';
+	        document.querySelector('.info_text_1').style.display = 'block';
 	    });
 
+	    document.getElementById('showInfoForm_2').addEventListener('click', function () {
+	        document.querySelector('.info_form_bg').style.display = 'block';
+	        document.querySelector('.info_form').style.display = 'block';
+	        document.querySelector('.info_text_2').style.display = 'block';
+	    });
 
-
+	    document.getElementById('showInfoForm_3').addEventListener('click', function () {
+	        document.querySelector('.info_form_bg').style.display = 'block';
+	        document.querySelector('.info_form').style.display = 'block';
+	        document.querySelector('.info_text_3').style.display = 'block';
+	    });
 
 
 	    document.getElementById('closeInfoForm').addEventListener('click', function () {
 	        document.querySelector('.info_form_bg').style.display = 'none';
 	        document.querySelector('.info_form').style.display = 'none';
+
+	        document.querySelector('.info_text_1').style.display = 'none';
+	        document.querySelector('.info_text_2').style.display = 'none';
+	        document.querySelector('.info_text_3').style.display = 'none';
 	    });
 
 	    document.querySelector('.info_form_bg').addEventListener('click', function (e) {
 	        if (e.target.classList.contains('info_form_bg')) {
 	            document.querySelector('.info_form_bg').style.display = 'none';
 	            document.querySelector('.info_form').style.display = 'none';
+
+	            document.querySelector('.info_text_1').style.display = 'none';
+	            document.querySelector('.info_text_2').style.display = 'none';
+	            document.querySelector('.info_text_3').style.display = 'none';
 	        }
 	    });
 
