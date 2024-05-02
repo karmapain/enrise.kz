@@ -1,3 +1,6 @@
+body{
+	margin: 0;
+}
 .fixed_header{
 	position: fixed;
 	top: 10 px;
