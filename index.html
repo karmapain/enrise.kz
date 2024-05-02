@@ -37,7 +37,7 @@
             transform: translate(-50%, -50%);
             background-color: #444444;
             padding: 20px;
-            border: 1px solid #2e00ff;
+            border: 1px solid #9998;
             border-radius: 10px;
             z-index: 9999;
             color: #FFF;
@@ -91,6 +91,86 @@
         }
 
         .send_mail_form .close-btn:hover {
+        	color: #992222;
+        }
+
+
+
+
+
+        .info_form_bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
+        }
+
+        .info_form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #444444;
+            padding: 20px;
+            border: 1px solid #9998;
+            border-radius: 10px;
+            z-index: 9999;
+            color: #FFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .info_form form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .info_form label,
+        .info_form input,
+        .info_form textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .info_form input[type="submit"] {
+            background-color: #0dbf75;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .info_form input[type="submit"]:hover {
+            background-color: #1eAF86;
+        }
+
+        .info_form textarea {
+            height: 100px;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        .info_form .close-btn {
+        	font-size: 50px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .info_form .close-btn:hover {
         	color: #992222;
         }
     </style>
@@ -176,9 +256,9 @@
 						    <li>Правовые аспекты тендерной деятельности</li>
 						</ul>
 					</p>
-	                <div class="btn_more">
-	                    <a class="icon mb-3">Подробнее</a>
-	                </div>
+	                <button type="submit" class="btn_more" id="showInfoForm">
+	                    Подробнее
+	                </button>
 	            </div>
 	        </div>
 
@@ -318,6 +398,19 @@
 	    </form>
 	</div>
 
+
+	<div class="info_form_bg"></div>
+	<!-- Form -->
+	<div class="info_form">
+	    <span class="close-btn" id="closeInfoForm">×</span>
+	    <h2>Курсы</h2>
+	    <div>
+	    	lflfllflflfllflfl flfllflflfllf
+	    </div>
+	</div>
+
+
+
 	<script src="js/script.js"></script>
 	<script>
 	    document.getElementById('showMailForm').addEventListener('click', function () {
@@ -336,6 +429,39 @@
 	            document.querySelector('.send_mail_form').style.display = 'none';
 	        }
 	    });
+
+
+	    document.getElementById('showInfoForm').addEventListener('click', function () {
+	        document.querySelector('.info_form_bg').style.display = 'block';
+	        document.querySelector('.info_form').style.display = 'block';
+	    });
+
+
+
+
+
+	    document.getElementById('closeInfoForm').addEventListener('click', function () {
+	        document.querySelector('.info_form_bg').style.display = 'none';
+	        document.querySelector('.info_form').style.display = 'none';
+	    });
+
+	    document.querySelector('.info_form_bg').addEventListener('click', function (e) {
+	        if (e.target.classList.contains('info_form_bg')) {
+	            document.querySelector('.info_form_bg').style.display = 'none';
+	            document.querySelector('.info_form').style.display = 'none';
+	        }
+	    });
+
+
+
+
+
+
+
+
+
+
+
 	</script>
 </body>
 
