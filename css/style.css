@@ -104,7 +104,11 @@ main {
 	justify-content: center;
 	border-radius: 10px;
 	color: #999;
-	
+
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	background: #2222;
 }
 
 									/* TEXT */
