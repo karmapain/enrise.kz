@@ -869,7 +869,7 @@ main {
             background-color: #0dbf75;
         }
 
-        .info_form .sub_btn:hover {
+        #submitBtn:hover {
             background-color: #1eAF86;
         }
 
