@@ -11,16 +11,18 @@ a{
 	text-decoration: none;
 
 }
+h2 {
+	margin: 0;
+	font-size: 1.8rem!important;
+}
 .modal{
 	color: white;
 }
 button{
 	text-decoration: none;
 }
-h2 {
-	margin: 0;
-	font-size: 1.8rem!important;
-}
+
+
 						/* стили для главной страницы */
 body {
   font-family: 'Manrope';
@@ -88,18 +90,20 @@ main {
 }
 
 .btn_more{
-	margin-top: 30px;
-	bottom: 20px;
-	display: flex;
+	cursor: pointer;
+	position: absolute;
+	bottom: 16px;
+    margin: 0 10px 0 10px;
+   	text-align: center;
 	justify-content: center;
 	border-radius: 10px;
-	color: #999;
-
+	color: #fff;
 	align-items: center;
 	height: 50px;
 	width: 100%;
+	max-width: 340px;
 	background: #2222;
-	bottom: 0;
+
 }
 
 .btn_more:hover ,.btn_price:hover{
@@ -108,6 +112,7 @@ main {
 }
 
 .btn_price{
+	cursor: pointer;
 	margin-top: 30px;
 	bottom: 20px;
 	display: flex;
@@ -172,7 +177,7 @@ main {
 
 .price{
 	margin: 0 10px 0 10px;
-	margin-bottom: 25vh;
+	margin-bottom: 8vh;
 }
 
 .price .gradient-border-card{
@@ -188,9 +193,10 @@ main {
 	padding: 30px;
 	border-radius: var(--border-radius);
 	flex: 1 1;
+	max-width: 360px;
+	max-height: 560px;
 	transition: background .2s ease-in-out,box-shadow .2s ease-in-out;
 	box-shadow: 0 0 0 1px transparent, 0 2px 4px transparent, 0 12px 24px transparent;
-	cursor: pointer;
 	z-index: 1;
 	@keyframes shimmer {
 		0% {
@@ -700,16 +706,25 @@ main {
 }
 
 .lex_div {
-	height: 20%;
-	max-height: 30%;
+	height: 40%;
+	max-height: 40%;
 
 
 	background-color: #7776;
-	width: 90%;
+	width: 100%;
 }
 
-/****************/
-
+/*******			FORM ФОРМЫ ВСПЛЫВАЮЩИЕ			********/			
+.form_h1 {
+	margin: 0;
+    text-align:center;
+    font-size:36px;
+    padding:0;
+    margin:0 0 20px 0;
+    position:relative;
+    color:#8C8C8C;
+    z-index: 0;
+}
 
         .send_mail_form_bg {
             display: none;
@@ -779,9 +794,11 @@ main {
         .send_mail_form .close-btn {
         	font-size: 50px;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            margin: 0px 15px 0 0;
+            top: 0;
+            right: 0;
             cursor: pointer;
+             z-index: 100;
         }
 
         .send_mail_form .close-btn:hover {
@@ -819,7 +836,7 @@ main {
         }
 
         .info_form form {
-            max-width: 400px;
+            max-width: 560px;
             margin: 0 auto;
         }
 
@@ -872,7 +889,7 @@ main {
         }
 
         .info_form .close-btn:hover {
-        	color: #992222;
+        	color: red;
         }
 
         .info_text_1, .info_text_2, .info_text_3 {
