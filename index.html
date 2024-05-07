@@ -158,9 +158,6 @@
 								</p>
 
 				</div>
-				<div class="btn_price">
-					<a class="icon mt-3">Выбрать</a>
-				</div>
 			</div>
 
 			<div class="price">
@@ -176,9 +173,6 @@
 									<p>10 заявок на обсуждение конкурсной / аукционной документации </p><br>
 								</p>
 				</div>
-				<div class="btn_price">
-					<a class="icon mt-3">Выбрать</a>
-				</div>
 			</div>
 			<div class="price ">
 				<div class="gradient-border-card">
@@ -188,9 +182,6 @@
 					<p class="mt-3 price_text">Включает тариф Базовый и Премиюм <br>
 									Подача заявок на обсуждение конкурсной / аукционной документации <br>
 								</p>
-				</div>
-				<div class="btn_price">
-					<a class="icon mt-3">Выбрать</a>
 				</div>
 			</div>
 
@@ -218,25 +209,64 @@
 	<div class="send_mail_form_bg"></div>
 
 	<!-- Form -->
-	<div class="send_mail_form">
-	    <span class="close-btn" id="closeMailForm">×</span>
-	    <h2>Заполните данные</h2><br>
-	    <form action="send_mail.php" method="POST">
-	        <label for="phone">Номер телефона:</label>
-	        <input type="text" id="phone" name="phone" required><br>
+<style>
+	.details-btn {
+	    margin-left: 10px;
+	}
 
-	        <label for="email">Email:</label>
-	        <input type="email" id="email" name="email" required><br>
+	.radio-btn {
+	    display: inline-block;
+	    cursor: pointer;
+	    padding: 5px 10px;
+	    border: 1px solid #ccc;
+	    border-radius: 5px;
+	    margin-right: 10px;
+	    width: 80%;
+	}
 
-	        <label for="name">ФИО:</label>
-	        <input type="text" id="name" name="name" required><br>
+	.radio-btn input[type="radio"] {
+	    display: none;
+	}
 
-	        <label for="message">Сопроводительный текст:</label>
-	        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+	.radio-btn input[type="radio"]:checked + label {
+	    background-color: #007bff;
+	    color: white;
+	}
 
-	        <input type="submit" value="Отправить">
-	    </form>
-	</div>
+</style>
+
+
+
+<div class="send_mail_form">
+    <span class="close-btn" id="closeMailForm">×</span>
+    <h2>Заполните данные</h2><br>
+    <form action="send_mail.php" method="POST">
+        <label for="phone">Номер телефона:</label>
+        <input type="text" id="phone" name="phone" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="name">ФИО:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="tariff">Выберите тариф:</label>
+        <label class="radio-btn" for="basic">Базовый<input type="radio" id="basic" name="tariff" value="basic" onclick="enableSubmitButton(this)"></label>
+
+        <label class="radio-btn" for="premium">Премиум<input type="radio" id="premium" name="tariff" value="premium" onclick="enableSubmitButton(this)"></label>
+
+        <label class="radio-btn" for="premium_plus">Премиум+<input type="radio" id="premium_plus" name="tariff" value="premium_plus" onclick="enableSubmitButton(this)"></label>
+
+        <label class="radio-btn" for="vip">VIP<input type="radio" id="vip" name="tariff" value="vip" onclick="enableSubmitButton(this)"></label>
+
+        <button class="btn_price" onclick="showDetails('vip')">Подробнее</button><br>
+
+        <label for="message">Сопроводительный текст:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Отправить" id="submitBtn" disabled>
+    </form>
+</div>
 
 
 	<div class="info_form_bg"></div>
@@ -287,6 +317,19 @@
 
 	<script src="js/script.js"></script>
 	<script>
+		function enableSubmitButton(radio) {
+		    document.getElementById("submitBtn").disabled = false;
+		    document.getElementById("submitBtn").classList.add('sub_btn');
+		}
+
+		function showDetails(tariff) {
+		    document.querySelector('.send_mail_form_bg').style.display = 'none';
+	        document.querySelector('.send_mail_form').style.display = 'none';
+
+	        scrollTo_2();
+		}
+
+
 	    document.getElementById('showMailForm').addEventListener('click', function () {
 	        document.querySelector('.send_mail_form_bg').style.display = 'block';
 	        document.querySelector('.send_mail_form').style.display = 'block';

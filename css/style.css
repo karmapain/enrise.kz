@@ -831,8 +831,7 @@ main {
             width: 100%;
         }
 
-        .info_form input[type="submit"] {
-            background-color: #0dbf75;
+        #submitBtn {
             color: white;
             border: none;
             padding: 10px 20px;
@@ -845,7 +844,15 @@ main {
             border-radius: 5px;
         }
 
-        .info_form input[type="submit"]:hover {
+        #submitBtn:disabled {
+            background-color: grey;
+        }
+
+        #submitBtn:enabled {
+            background-color: #0dbf75;
+        }
+
+        .info_form .sub_btn:hover {
             background-color: #1eAF86;
         }
 
