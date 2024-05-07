@@ -86,17 +86,27 @@ main {
 .btn_send{
 	color: white;
 }
+
 .btn_more{
-	position: absolute;
-	right: 30px;
-	bottom: 30px;
+	margin-top: 30px;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
 	border-radius: 10px;
 	color: #999;
+
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	background: #2222;
+	bottom: 0;
 }
+
 .btn_more:hover ,.btn_price:hover{
 	color: white;
 	filter: drop-shadow(1px 1px 5px gray);
 }
+
 .btn_price{
 	margin-top: 30px;
 	bottom: 20px;
@@ -153,24 +163,34 @@ main {
 }
 
 						/**************          	КАРТОЧКИ 			****************/
-.price{
-	margin: 0 10px 0 10px;
-}
+
 .card_flex{ /* в ряд и отступ */
 	display: flex;
-	margin-bottom:25vh;
 	justify-content: center;
+	align-items: stretch;
 }
+
+.price{
+	margin: 0 10px 0 10px;
+	margin-bottom: 25vh;
+}
+
+.price .gradient-border-card{
+	height: 100%;
+}
+
+.col-lg-4 {
+	height: 100%;
+}
+
 .gradient-border-card {
 	position: relative;
-
-	padding: 40px;
+	padding: 30px;
 	border-radius: var(--border-radius);
 	flex: 1 1;
 	transition: background .2s ease-in-out,box-shadow .2s ease-in-out;
 	box-shadow: 0 0 0 1px transparent, 0 2px 4px transparent, 0 12px 24px transparent;
 	cursor: pointer;
-	height: 100%;
 	z-index: 1;
 	@keyframes shimmer {
 		0% {
@@ -671,6 +691,21 @@ main {
 	to {
 		transform: rotate(1turn)
 	}
+}
+
+.lex_img{
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lex_div {
+	height: 20%;
+	max-height: 30%;
+
+
+	background-color: #7776;
+	width: 90%;
 }
 
 /****************/
